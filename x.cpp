@@ -1,8 +1,9 @@
 /*
  * the time limit is very strict so I'll explain the main idea then we will try to optimize it
- * let last [M] , last[i] = is the last row which s[lastrow][i] = '1' 
+ * we loop from the first to the last row 
+ * let last [M] , last[i] = is the last row which s[lastrow][i] = '0' 
  * we will put last [i] in a vector , sort it and try to get every perfix of the vector as a solution 
- * but sorting is expensive , by looping from the first to the last row we notice that every last [i] either will stay last [i] or will be equel to the current row 
+ * but sorting is expensive, we notice that every last [i] either will stay last [i] or will be equel to the current row 
  * if last [i] will be equel to the current row then for sure it will be the maximum last [i] 
  * so we just make another vector move all the last [i] which stayed last[i] then move the last[i] which become the current row
 */
